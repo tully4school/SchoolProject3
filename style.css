@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: black;
+}
+header {
+	display: inline-flex;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+.navbar {
+	display: inline-flex;
+	font-size: 24px;
+}
+.navbarli {
+	font-family: 'Alfa Slab One', cursive;
+	padding: 0 40px;
+}
