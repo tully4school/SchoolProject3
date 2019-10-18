@@ -19,3 +19,11 @@ a {
 	font-family: 'Alfa Slab One', cursive;
 	padding: 0 40px;
 }
+.tabContent.active {
+   background-color: white;
+   z-index: 0;
+   border-right: 0px;
+   border-left: 0px;
+   height: 110px;
+   bottom: 0px;
+   overflow: hidden;
