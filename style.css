@@ -46,6 +46,7 @@ a {
 	background-color: #c7c7c7;
 }
 .tabContent {
+	position: relative;
 	display:none;
 	height: 250px;
 }
@@ -54,8 +55,53 @@ a {
 	display: block;
 	background-color: white;
 }
+.innerContainer {
+	margin: 0 auto;
+	position: relative;
+	width: 15%;
+	padding: 2%;
+	border: 1px solid gray;
+	box-shadow: 4px 10px 6px 0px gray;
+}
+h4 {
+	margin-bottom:0;
+}
+.currentPrice, .priceChange {
+	margin-top: 5px;
+}
+.red {
+	color: red;
+}
+.green {
+	color: green;
+}
+/*.coinLogo {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	margin: 0 auto;
+}
+.coinLogo1 {
+	position: absolute;
+	width: 7%;
+	left: 47%;
+	right: 50%;
+	top: 25%;
+}
+.coinLogo2 {
+	position: absolute;
+	width: 13%;
+	left: 44%;
+	right: 50%;
+}*/
+/*.currentPrice {
+	position: absolute;
+	left: 46.1%;
+	right: 50%;
+	top: 70%;
+}*/
 .main {
 	margin-top: 0;
 }
-
+@media and 
 
