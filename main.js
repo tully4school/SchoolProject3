@@ -38,10 +38,10 @@ fetch(url)
     .then(res => {
         console.log(res)
         for (let i = 0; i < div.length; i++) {
-            if (res[0]['1d'].priceChange > 0) {
+            if (res[0]['1d'].price_change > 0) {
                 priceChange.classList.add('class', 'green')
             } else {
-                priceChange.classList.add('class', 'red')
+            	priceChange.classList.add('class', 'red')
             }
             switch (div[i].id) {
                 case 'BTC':
@@ -54,7 +54,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(cpText.cloneNode(true))
                     currentP.innerText = ('$') + res[0].price
                     div[i].lastElementChild.appendChild(currentP.cloneNode(true))
-                    pcText.innerText = ('24H change:')
+                    pcText.innerText = ('24H change')
                     div[i].lastElementChild.appendChild(pcText.cloneNode(true))
                     priceChange.innerText = ('$') + res[0]['1d'].price_change
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
@@ -69,7 +69,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(cpText.cloneNode(true))
                     currentP.innerText = ('$') + res[1].price
                     div[i].lastElementChild.appendChild(currentP.cloneNode(true))
-                    pcText.innerText = ('24H change:')
+                    pcText.innerText = ('24H change')
                     div[i].lastElementChild.appendChild(pcText.cloneNode(true))
                     priceChange.innerText = ('$') + res[1]['1d'].price_change
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
@@ -85,7 +85,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(cpText.cloneNode(true))
                     currentP.innerText = ('$') + res[2].price
                     div[i].lastElementChild.appendChild(currentP.cloneNode(true))
-                    pcText.innerText = ('24H change:')
+                    pcText.innerText = ('24H change')
                     div[i].lastElementChild.appendChild(pcText.cloneNode(true))
                     priceChange.innerText = ('$') + res[2]['1d'].price_change
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
@@ -100,7 +100,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(cpText.cloneNode(true))
                     currentP.innerText = ('$') + res[3].price
                     div[i].lastElementChild.appendChild(currentP.cloneNode(true))
-                    pcText.innerText = ('24H change:')
+                    pcText.innerText = ('24H change')
                     div[i].lastElementChild.appendChild(pcText.cloneNode(true))
                     priceChange.innerText = ('$') + res[3]['1d'].price_change
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
@@ -115,7 +115,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(cpText.cloneNode(true))
                     currentP.innerText = ('$') + res[4].price
                     div[i].lastElementChild.appendChild(currentP.cloneNode(true))
-                    pcText.innerText = ('24H change:')
+                    pcText.innerText = ('24H change')
                     div[i].lastElementChild.appendChild(pcText.cloneNode(true))
                     priceChange.innerText = ('$') + res[4]['1d'].price_change
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
@@ -130,7 +130,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(cpText.cloneNode(true))
                     currentP.innerText = ('$') + res[5].price
                     div[i].lastElementChild.appendChild(currentP.cloneNode(true))
-                    pcText.innerText = ('24H change:')
+                    pcText.innerText = ('24H change')
                     div[i].lastElementChild.appendChild(pcText.cloneNode(true))
                     priceChange.innerText = ('$') + res[5]['1d'].price_change
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
@@ -145,7 +145,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(cpText.cloneNode(true))
                     currentP.innerText = ('$') + res[6].price
                     div[i].lastElementChild.appendChild(currentP.cloneNode(true))
-                    pcText.innerText = ('24H change:')
+                    pcText.innerText = ('24H change')
                     div[i].lastElementChild.appendChild(pcText.cloneNode(true))
                     priceChange.innerText = ('$') + res[6]['1d'].price_change
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
@@ -160,7 +160,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(cpText.cloneNode(true))
                     currentP.innerText = ('$') + res[7].price
                     div[i].lastElementChild.appendChild(currentP.cloneNode(true))
-                    pcText.innerText = ('24H change:')
+                    pcText.innerText = ('24H change')
                     div[i].lastElementChild.appendChild(pcText.cloneNode(true))
                     priceChange.innerText = ('$') + res[7]['1d'].price_change
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
@@ -176,7 +176,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(cpText.cloneNode(true))
                     currentP.innerText = ('$') + res[8].price
                     div[i].lastElementChild.appendChild(currentP.cloneNode(true))
-                    pcText.innerText = ('24H change:')
+                    pcText.innerText = ('24H change')
                     div[i].lastElementChild.appendChild(pcText.cloneNode(true))
                     priceChange.innerText = ('$') + res[8]['1d'].price_change
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
@@ -191,7 +191,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(cpText.cloneNode(true))
                     currentP.innerText = ('$') + res[9].price
                     div[i].lastElementChild.appendChild(currentP.cloneNode(true))
-                    pcText.innerText = ('24H change:')
+                    pcText.innerText = ('24H change')
                     div[i].lastElementChild.appendChild(pcText.cloneNode(true))
                     priceChange.innerText = ('$') + res[9]['1d'].price_change
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
