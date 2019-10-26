@@ -20,6 +20,9 @@ a {
 	color: black;
 	text-decoration: none;
 }
+.logo {
+	width: 80px;
+}
 .navbar {
 	display: inline-flex;
 	font-size: 24px;
@@ -31,6 +34,7 @@ a {
 }
 .tab {
 	background-color: grey;
+	border-radius: 8px 8px 0 0;
 }
 .tabLinks {
 	width: 10%;
@@ -41,9 +45,15 @@ a {
 }
 .tabLinks:hover {
 	background-color: #c7c7c7;
+	border-radius: 8px 8px 0 0;
 }
 .tabLinks.active {
-	background-color: #c7c7c7;
+	background-color: white;
+	border-left:1px solid #c7c7c7 ;
+	border-top:1px solid #c7c7c7 ;
+	border-right:1px solid #c7c7c7 ;
+	border-radius: 8px 8px 0 0;
+
 }
 .tabContent {
 	position: relative;
@@ -54,10 +64,18 @@ a {
 	display: block;
 	background-color: white;
 }
+.container {
+	border-left:1px solid #c7c7c7 ;
+	border-right:1px solid #c7c7c7 ;
+	padding: 50px;
+}
+h1 {
+	margin-top: 0px;
+}
 .innerContainer {
 	margin: 0 auto;
 	position: relative;
-	width: 30%;
+	width: 15%;
 	padding: 2%;
 	border: 1px solid gray;
 	box-shadow: 4px 10px 6px 0px gray;
@@ -96,20 +114,22 @@ h4 {
 .main {
 	margin-top: 0;
 }
-@media screen and (max-width: 2000px) and (min-width: 961px) {
+@media screen and (max-width: 2000px) and (min-width: 1063px) {
 	.lg {
 		display: none;
 	}
 	.innerContainer {
-		width: 30%;
+		width: 15%;
+		font-size: 20px;
 	}
 }
-@media screen and (max-width: 960px) and (min-width: 586px) {
+@media screen and (max-width: 1063px) and (min-width: 586px) {
 	.xl {
 		display: none;
 	}
 	.innerContainer{
-		width: 60%;
+		width: 30%;
+		font-size: 20px;
 	}
 }
 

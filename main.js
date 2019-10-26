@@ -1,9 +1,11 @@
 console.log("we are connected!")
     // evt.preventDefault()
     // 684cffb24d974a6e8f18bea5d0e5b926
+let logo = document.querySelector('.logo')
+let tabTitle = document.querySelectorAll('[data-title]')
 let tabLinks = document.querySelectorAll(".tabLinks")
 let tabContent = document.querySelectorAll(".tabContent")
-let url = "https://api.nomics.com/v1/currencies/ticker?key=684cffb24d974a6e8f18bea5d0e5b926&ids=BTC,ETH,XRP,USDT,BCH,LTC,BNB,EOS,BSV,XLM&interval=1d,30d&convert=USD"
+let url = "https://api.nomics.com/v1/currencies/ticker?key=2018-09-demo-dont-deploy-b69315e440beb145&ranks=1,2,3,4,5,6,7,8,9,10"
 let createDiv = document.createElement("div")
 createDiv.setAttribute('class', 'innerContainer')
 let h1 = document.createElement("h1")
@@ -16,6 +18,7 @@ let pcText = document.createElement('h4')
 let priceChange = document.createElement("p")
 priceChange.setAttribute('class', 'priceChange')
 let div = document.querySelectorAll("div")
+let j = 0;
 
 
 
@@ -37,14 +40,17 @@ fetch(url)
     })
     .then(res => {
         console.log(res)
+
         for (let i = 0; i < div.length; i++) {
             if (res[0]['1d'].price_change > 0) {
                 priceChange.classList.add('class', 'green')
             } else {
-            	priceChange.classList.add('class', 'red')
+                priceChange.classList.add('class', 'red')
             }
+            logo.setAttribute('src', res[0].logo_url)
             switch (div[i].id) {
                 case 'BTC':
+                    tabTitle[0].innerHTML = res[0].name
                     h1.innerText = res[0].name
                     div[i].appendChild(h1.cloneNode(true))
                     div[i].appendChild(createDiv.cloneNode(true))
@@ -60,6 +66,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
                     break;
                 case 'ETH':
+                    tabTitle[1].innerHTML = res[1].name
                     h1.innerText = res[1].name
                     div[i].appendChild(h1.cloneNode(true))
                     div[i].appendChild(createDiv.cloneNode(true))
@@ -75,6 +82,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
                     break;
                 case 'XRP':
+                    tabTitle[2].innerHTML = res[2].name
                     h1.innerText = res[2].name
                     div[i].appendChild(h1.cloneNode(true))
                     div[i].appendChild(createDiv.cloneNode(true))
@@ -91,6 +99,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
                     break;
                 case 'USDT':
+                    tabTitle[3].innerHTML = res[3].name
                     h1.innerText = res[3].name
                     div[i].appendChild(h1.cloneNode(true))
                     div[i].appendChild(createDiv.cloneNode(true))
@@ -106,6 +115,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
                     break;
                 case 'BCH':
+                    tabTitle[4].innerHTML = res[4].name
                     h1.innerText = res[4].name
                     div[i].appendChild(h1.cloneNode(true))
                     div[i].appendChild(createDiv.cloneNode(true))
@@ -121,6 +131,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
                     break;
                 case 'LTC':
+                    tabTitle[5].innerHTML = res[5].name
                     h1.innerText = res[5].name
                     div[i].appendChild(h1.cloneNode(true))
                     div[i].appendChild(createDiv.cloneNode(true))
@@ -136,6 +147,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
                     break;
                 case 'BNB':
+                    tabTitle[6].innerHTML = res[6].name
                     h1.innerText = res[6].name
                     div[i].appendChild(h1.cloneNode(true))
                     div[i].appendChild(createDiv.cloneNode(true))
@@ -151,6 +163,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
                     break;
                 case 'EOS':
+                    tabTitle[7].innerHTML = res[7].name
                     h1.innerText = res[7].name
                     div[i].appendChild(h1.cloneNode(true))
                     div[i].appendChild(createDiv.cloneNode(true))
@@ -166,6 +179,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
                     break;
                 case 'BSV':
+                    tabTitle[8].innerHTML = res[8].name
                     h1.innerText = res[8].name
                     div[i].appendChild(h1.cloneNode(true))
                     div[i].appendChild(createDiv.cloneNode(true))
@@ -182,6 +196,7 @@ fetch(url)
                     div[i].lastElementChild.appendChild(priceChange.cloneNode(true))
                     break;
                 case 'XLM':
+                    tabTitle[9].innerHTML = res[9].name
                     h1.innerText = res[9].name
                     div[i].appendChild(h1.cloneNode(true))
                     div[i].appendChild(createDiv.cloneNode(true))
@@ -215,6 +230,9 @@ tabLinks.forEach(function(listener) {
     listener.addEventListener("click", open, function(evt) {
         evt.preventDefault()
         console.log(evt)
+        if (tabTitle[j] == res[j]) {
+            console.log(res[j])
+        }
     })
 })
 
